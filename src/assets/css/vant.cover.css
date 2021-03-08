@@ -1,0 +1,6 @@
+.van-button {
+  user-select: none;
+}
+.van-dialog {
+  width: 75% !important;
+}
