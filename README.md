@@ -32,7 +32,7 @@ npm run serve
 
 ### 打包构建
 ```
-npm run build
+npm run build:[env]
 ```
 高级：npx vue-cli-service build [options] [entry|pattern]
 
@@ -52,11 +52,6 @@ npm run build
 ### 代码格式检查
 ```
 npm run lint
-```
-
-### 自动校正代码格式（慎用）
-```
-npm run lint --fix
 ```
 
 ### ui框架

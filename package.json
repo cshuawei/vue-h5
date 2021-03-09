@@ -4,12 +4,15 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "serve:mock": "cross-env NODE_ENV=mock vue-cli-service serve",
+    "serve:mock": "vue-cli-service serve --mode mock",
     "build": "vue-cli-service build",
+    "build:debug": "vue-cli-service build --mode debug",
+    "build:uat": "vue-cli-service build --mode uat",
+    "build:production": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "browserslist": "^4.11.1",
     "caniuse-lite": "^1.0.30001042",
     "core-js": "^2.6.5",
@@ -17,7 +20,7 @@
     "vconsole": "^3.3.2",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
-    "vue-superset": "^1.4.0",
+    "vue-superset": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {

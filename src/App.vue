@@ -43,10 +43,22 @@ export default {
     // })
 
     // 全局配置
+    const env = process.env.NODE_ENV
+    const countryCode = process.env.VUE_APP_COUNTRY_CODE
+    const appId = process.env.VUE_APP_APP_ID
+    const pjson = require('../package.json')
+    console.log('env:', env)
+    console.log('version:', pjson.version)
     Config.custom = {
-      appId: 'paas-ui-admin',
-      timeout: 10000,
-      lang: 'zh'
+      appId, // 应用ID，必配项
+      appName: 'paas-app-admin', // 应用名称，必配项
+      interfacePathMap: { // 接口路径映射
+        'paas-app-admin': {
+          interfaceDomain: this.$util.getInterfaceDomain(env, { appName: 'paas-app-admin', countryCode }),
+          publicPath: '/paas/app/admin',
+          mockPublicPath: '/mock/14/paas/app/mall'
+        }
+      }
     }
   }
 }

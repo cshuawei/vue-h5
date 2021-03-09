@@ -4,7 +4,6 @@ import router from './router'
 import store from './store'
 import Vant from 'vant'
 import { Common, Mobile } from 'vue-superset'
-import AxiosConfig from '../axios.config'
 import 'vant/lib/index.css'
 import './assets/css/vant.cover.css'
 
@@ -15,7 +14,6 @@ import HelloWorld from './components/HelloWorld'
 Vue.component('HelloWorld', HelloWorld)
 
 Vue.use(Vant)
-Vue.use(AxiosConfig)
 Vue.use(Common)
 Vue.use(Mobile)
 Vue.config.productionTip = false
